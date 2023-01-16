@@ -10,9 +10,9 @@ jobs:
 runs:
   using: 'composite'
   steps:
-    - uses: VisiumCH/checkout@v2
+    - uses: actions/checkout@v3
     - name: Set up Python 3.10
-      uses: VisiumCH/setup-python@v2
+      uses: actions/setup-python@v2
       with:
         python-version: "3.10"
     - name: Install dependencies
