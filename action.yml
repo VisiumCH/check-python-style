@@ -1,0 +1,35 @@
+name: Check Visium Python Style
+description: Check that the code follows Visium's python style guidelines
+
+inputs:
+  python-version:
+    required: true
+
+jobs:
+
+runs:
+  using: 'composite'
+  steps:
+    - uses: VisiumCH/checkout@v2
+    - name: Set up Python 3.10
+      uses: VisiumCH/setup-python@v2
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python -m pip install pipenv
+        pipenv install --dev --system --deploy
+    - name: Check formatting
+      run: |
+        black --check .
+        isort --check --gitignore .
+    - name: Lint with Pylint
+      run: |
+        pylint . --recursive=y
+    - name: Check doc style with pydocstyle
+      run: |
+        pydocstyle
+    - name: Check that all functions are type annotated
+      run: |
+        ! mypy . --disallow-untyped-defs --disallow-incomplete-defs | grep "Function is missing" || false
