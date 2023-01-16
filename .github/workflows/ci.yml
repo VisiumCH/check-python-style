@@ -11,3 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: VisiumCH/check-python-style@main
+        with:
+          python-version: "3.10"
