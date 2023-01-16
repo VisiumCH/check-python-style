@@ -1,7 +1,7 @@
 
 # check-python-style github action
 
-## Objecctive
+## Objective
 
 The purpose of this github action is to implement a CI that checks whether the code follows the Visium python guidelines.
 
