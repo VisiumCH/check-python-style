@@ -40,5 +40,5 @@ runs:
 
     - name: Check that all functions are type annotated
       run: |
-        ! mypy . --disallow-untyped-defs --disallow-incomplete-defs | grep "Function is missing" || false
+        mypy . --disallow-untyped-defs --disallow-incomplete-defs
       shell: bash
