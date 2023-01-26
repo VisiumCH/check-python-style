@@ -19,7 +19,7 @@ runs:
       run: |
         python -m pip install --upgrade pip
         python -m pip install pipenv
-        pipenv install --dev --system --deploy
+        pipenv install --categories="dev-packages packages" --system --deploy
       shell: bash
 
     - name: Check formatting
