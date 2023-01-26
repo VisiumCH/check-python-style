@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - uses: VisiumCH/check-python-style@main
         with:
           python-version: "3.10"
