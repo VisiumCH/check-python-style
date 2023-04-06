@@ -1,3 +1,4 @@
+[![Continuous Integration Pipeline](https://github.com/VisiumCH/check-python-style/actions/workflows/ci.yml/badge.svg)](https://github.com/VisiumCH/check-python-style/actions/workflows/ci.yml)
 
 # check-python-style github action
 
