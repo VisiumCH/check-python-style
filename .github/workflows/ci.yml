@@ -12,6 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - uses: "VisiumCH/check-python-style@${GITHUB_SHA}"
+      - uses: VisiumCH/check-python-style@${{github.sha}}
         with:
           python-version: "3.10"
