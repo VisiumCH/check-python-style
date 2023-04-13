@@ -11,7 +11,7 @@ isort = "*"
 pylint = "*"
 mypy = "*"
 pydocstyle = "*"
-visiumlint = {ref = "master", git = "ssh://git@github.com/VisiumCH/visium-lint.git"}
+visiumlint =  "*"
 
 [requires]
 python_version = "3.10"
