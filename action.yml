@@ -22,23 +22,8 @@ runs:
         pipenv install --dev --system --deploy
       shell: bash
 
-    - name: Check formatting
+    - name: Check linting with visiumlint
       run: |
-        black --check .
-        isort --check --gitignore .
+        visiumlint
       shell: bash
 
-    - name: Lint with Pylint
-      run: |
-        pylint . --recursive=y
-      shell: bash
-
-    - name: Check doc style with pydocstyle
-      run: |
-        pydocstyle
-      shell: bash
-
-    - name: Check that all functions are type annotated
-      run: |
-        ! mypy . --disallow-untyped-defs --disallow-incomplete-defs | grep "Function is missing" || false
-      shell: bash
