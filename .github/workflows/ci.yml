@@ -6,11 +6,9 @@ on:
   pull_request:
     branches: [ main ]
   workflow_dispatch:
-    inputs:
-      python-version:
-        required: true
-        type: string
 
 jobs:
   check-python-style:
     uses: ./workflow.yml
+    with:
+      python-version: 3.11
