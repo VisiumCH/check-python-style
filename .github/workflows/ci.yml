@@ -5,13 +5,12 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      python-version:
+        required: true
+        type: string
 
 jobs:
-  ci:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - uses: ./
-        with:
-          python-version: "3.10"
+  check-python-style:
+    uses: ./workflow.yml
