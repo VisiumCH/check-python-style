@@ -9,7 +9,7 @@ on:
 
 jobs:
   check-python-style:
-    #uses: ./.github/workflows/workflow.yml
-    uses: ./workflow.yml
+    uses: ./.github/workflows/workflow.yml
+    #uses: ./workflow.yml
     with:
       python-version: 3.11
