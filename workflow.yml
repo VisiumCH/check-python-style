@@ -55,5 +55,6 @@ convention = \"google\"" > pyproject.toml
       - name: Check linting with visiumlint
         run: |
           visiumlint
+          echo "Visium Python Style Check Passed"
         shell: bash
       
