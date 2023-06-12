@@ -1,4 +1,5 @@
-"""This is a sample module to test the check of visium coding standards."""
+"""This is a sample module to test the check of visium coding standards.
+To test the workflow we run the ci.yml. This module is some dummy python code to make sure the CI works. """
 
 
 def calculate_sum(a: int, b: int) -> int:
