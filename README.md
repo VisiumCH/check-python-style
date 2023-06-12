@@ -21,13 +21,9 @@ on:
     branches: [ main ]
 
 jobs:
-  ci:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      
-      - uses: VisiumCH/check-python-style@main
-        with:
-          python-version: "3.10"
+  check-python-style:
+    uses: VisiumCH/.github/workflows/workflow.yml
+    with:
+      python-version: 3.11
 
 ```
