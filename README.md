@@ -22,8 +22,25 @@ on:
 
 jobs:
   check-python-style:
-    uses: VisiumCH/.github/workflows/workflow.yml
+    uses: VisiumCH/check-python-style/.github/workflows/workflow.yml
     with:
       python-version: 3.11
 
 ```
+
+## Test the CI locally
+
+To test the CI you can use `act` which can run your github actions locally. This is very useful to debug your CI.
+
+#### On MacOS
+
+```bash
+act --container-architecture linux/amd64
+```
+
+#### On Linux
+
+```bash
+act
+```
+
