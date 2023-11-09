@@ -4,6 +4,9 @@ description: Check that the code follows Visium's python style guidelines
 inputs:
   python-version:
     required: true
+  path:
+    required: false
+    default: "./"
 
 jobs:
 
@@ -24,6 +27,6 @@ runs:
 
     - name: Check linting with visiumlint
       run: |
-        visiumlint
+        visiumlint ${{ inputs.path }}
       shell: bash
 
